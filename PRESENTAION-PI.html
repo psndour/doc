@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>Document de Présentation du Projet FreeMoney</title>
+<title>Document de Présentation du Projet d&#8217;integration de la plateforme interoperable de la BCEAO (PI) avec FREE</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -547,14 +547,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Document de Présentation du Projet FreeMoney</h1>
+<h1>Document de Présentation du Projet d&#8217;integration de la plateforme interoperable de la BCEAO (PI) avec FREE</h1>
 </div>
 <div id="content">
 <div class="sect1">
 <h2 id="_description_du_projet">Description du Projet</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le projet  a pour objectif principal de rendre les transactions financières plus accessibles, rapides et interopérables en intégrant la plateforme monétique avec le système de la Banque Centrale des États de l&#8217;Afrique de l&#8217;Ouest (BCEAO). FreeMoney vise à offrir une expérience utilisateur optimale en permettant des transferts peer-to-peer, des paiements marchands, et d&#8217;autres opérations monétaires entre les participants, tout en assurant la conformité aux normes réglementaires établies par la BCEAO.</p>
+<p>Le projet  a pour objectif principal de rendre les transactions financières plus accessibles,
+rapides et interopérables en intégrant la plateforme monétique avec le système de
+la Banque Centrale des États de l&#8217;Afrique de l&#8217;Ouest (BCEAO). FreeMoney vise à offrir une expérience utilisateur optimale en permettant des transferts peer-to-peer, des paiements marchands, et d&#8217;autres opérations monétaires entre les participants, tout en assurant la conformité aux normes réglementaires établies par la BCEAO.</p>
 </div>
 </div>
 </div>
@@ -564,7 +566,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Interopérabilité Financière :</strong> Établir une connexion transparente entre la plateforme monétique de FreeMoney et le système interopérable de la BCEAO, permettant des transactions fluides entre les participants.</p>
+<p><strong>Interopérabilité :</strong> Établir une connexion transparente entre la plateforme monétique de FreeMoney et le système interopérable de la BCEAO, permettant des transactions fluides entre les participants.</p>
 </li>
 <li>
 <p><strong>Facilitation des Transferts :</strong> Permettre aux utilisateurs de FreeMoney d&#8217;effectuer des transferts rapides et sécurisés vers d&#8217;autres participants, qu&#8217;il s&#8217;agisse de wallets mobiles, d&#8217;autres systèmes de mobile money, ou de comptes bancaires.</p>
@@ -574,18 +576,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p><strong>Conformité Réglementaire :</strong> Assurer la conformité aux normes et régulations établies par la BCEAO pour garantir la sécurité et la légalité des opérations monétaires.</p>
-</li>
-<li>
-<p><strong>Expérience Utilisateur Améliorée :</strong> Offrir une interface conviviale et des fonctionnalités intuitives pour améliorer l&#8217;expérience globale des utilisateurs de FreeMoney.</p>
-</li>
-<li>
-<p><strong>Sécurité des Transactions :</strong> Mettre en place des mécanismes de sécurité robustes, y compris la signature des messages ISO 20022 et l&#8217;authentification mutuelle (mTLS), pour assurer l&#8217;intégrité et la sécurité des transactions.</p>
-</li>
-<li>
-<p><strong>Soutien aux Participants :</strong> Mettre en place des processus de support et d&#8217;assistance pour répondre aux besoins des participants, y compris la gestion des problèmes et incidents.</p>
-</li>
-<li>
-<p><strong>Facilitation des Transferts entre Systèmes :</strong> Simplifier le transfert de fonds entre d&#8217;autres systèmes de mobile money et les banques, offrant une connectivité étendue.</p>
 </li>
 <li>
 <p><strong>Transferts vers l&#8217;Espace CDEAO :</strong> Permettre des transferts vers l&#8217;espace de la Communauté Économique des États de l&#8217;Afrique de l&#8217;Ouest (CDEAO), couvrant les transactions bancaires et les mobiles monnaies.</p>
@@ -701,7 +691,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Implémentation des Scénarios de Transfert et Paiement Marchand</p>
 </li>
 <li>
-<p>Intégration avec Mobiquity et autres Composants</p>
+<p>Intégration avec Mobiquity et autres Composants en interne</p>
 </li>
 <li>
 <p>Tests Unitaires et Intégration</p>
@@ -716,71 +706,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_dépendances_besoins_des_autres_départements">Dépendances / Besoins des Autres Départements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Département Juridique</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Vérification de la Conformité Réglementaire</p>
-</li>
-<li>
-<p>Analyse des Contrats avec la BCEAO</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Département Financier</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Suivi des Transactions et Rapprochement</p>
-</li>
-<li>
-<p>Facturation des Services aux Participants</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Département Marketing</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Communication sur les Nouvelles Fonctionnalités</p>
-</li>
-<li>
-<p>Formation des Utilisateurs</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Département Support</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Mise en Place d&#8217;une Assistance Utilisateur</p>
-</li>
-<li>
-<p>Gestion des Problèmes et Incidents</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-30 03:28:21 UTC
+Last updated 2023-11-30 10:01:53 UTC
 </div>
 </div>
 <script>

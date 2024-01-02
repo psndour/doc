@@ -1,0 +1,43 @@
+Je vous présente le projet "Intégration du système interopérable de la BCEAO avec FreeMoney".
+FreeMoney: c'est une plateforme monétique qui permet de faire des transactions entre des wallet comme les transferts, opération de dépôt et de retrait.
+La BCEAO est la banque centrale des états de l'Afrique d'ouest.
+Actuellement, quand un client FreeMoney souhaite envoyer de l'argent vers un autre système de wallet ou vers un compte bancaire, ce n'est pas possible.
+La banque centrale a mis en place un système interopérable qui permet aux banques et système mobile monnaie (wallet) de pouvoir communiquer et faire des opérations de transfert (P2P) et de paiement marchand grâce au système interopérable appelé "PI" comme plateforme interopérable.
+Comment fonctionne "PI".
+En amont, il faut que les acteurs : banque et mobile monnaie soit enregistré comme participant dans le PI.
+Une fois enregistre, ils auront un code membre. C'est ce code membre qui identifie les acteurs de façons uniques dans le système.
+La phase d'après consiste à demander des accès de connectivité vers la plateforme qui va nous permet d'avoir de faire la demande des certificats
+L'étape de demande de certificat consiste à gérer la connectivité avec "PI" en demandant les certificats.
+On a deux certificats :
+-Certificat pour la signature des messages ISO 20022
+-Certificat client pour L'authentification mutuelle (mTLS)
+Pour chaque certificat, le processus d'acquisition interne est le suivant:
+- le demandeur initie la demande de certificat à partir d'un CSR
+-le vérificateur contrôle attentivement les informations fournies dans le CSR avant de le transmettre au validateur
+- le validateur valide la demande qui est maintenant transmise à l'autorité de certification
+
+Une fois cette phase clôturée, passe la partie intégration ou on a la possibilité de faire deux intégrations différente.
+Maintenant que vous disposez des deux certificats nécessaires (pour le MTLS et la signature), il reste à mettre en place et configurer la communication entre votre système et PI.
+Cette section vous permet de comprendre les différents modes de connexion à PI .
+Deux options s'offrent à vous pour configurer votre système et communiquer avec PI:
+
+Dans le système du participant, en vert sont représentées l'API PI
+ou l'AIP PI AIP :
+-Option 1: Connexion directe à PI
+Votre système communique directement avec les APIs de PI via un composant nommé API PI.
+
+-Option 2: Connexion en utilisant l'AIP
+Votre système appelle les APIs de l'AIP (Application d'Interfacage Participant) via un composant nommé API PI AIP.
+
+Options d'intégration des APIs
+
+Quelque soit l'option de connectivité choisie, pour appeler les APIs vous avez deux options d'intégration:
+
+-Option 1 : Intégrer pas à pas à partir des exemples de codes fournis
+Pour chaque scénario de communication avec le système, un guide d'intégration pas à pas est donné.
+Chaque guide fournit des instructions étape par étape et des exemples concrets pour vous permettre d'intégrer facilement et rapidement.
+
+-Option 2 : Générer un client d'API à partir de la spécification
+Pour cela, accédez à la page de documentation de l'API et téléchargez la spécification de l'API (OpenAPI). Générez et configurez un client API en utilisant l'outil OpenAPI Generator
+
+Votre application étant configurée, nous allons commencer à intégrer pas à pas les différentes interactions entre le système et PI.

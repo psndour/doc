@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+
+actor "Utilisateur" as utilisateur
+actor "Participant" as participant
+
+rectangle "Gestion des Transferts" {
+
+  usecase "UC3_1 : Demande de transfert" as UC3_1
+  usecase "UC3_2 : Accepter un transfert reçu" as UC3_2
+  usecase "UC3_3 : Réception du message de transfer" as UC3_3
+  usecase "UC3_4 : Notifier le client reception transfert" as UC3_4
+  usecase "UC3_5 : Vérifier le statut transfer" as UC3_5
+
+}
+
+utilisateur -- UC3_1
+participant -- UC3_2
+participant -- UC3_3
+participant -- UC3_4
+participant -- UC3_5
+utilisateur -- UC3_5
+
+@enduml

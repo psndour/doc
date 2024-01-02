@@ -1,0 +1,44 @@
+@startuml
+
+actor "Client Particulier Payeur" as clientPayeur
+participant "Application Mobile" as appMobile
+participant "Participant Client Payeur \n FREE-MONEY" as partClientPayeur
+database "AIP" as aip
+database "PI RAC" as piRac
+database "Système PI SPI" as piSpi
+participant "Participant Client Payé\nOTHERS" as partClientPaye
+actor "Client Particulier Payé" as clientPaye
+
+    clientPayeur -> appMobile: 1. Lance l'application
+    clientPayeur -> appMobile: 2. Initie transfert P2P\n(alias du client payé)
+    appMobile -> partClientPayeur: 3. Interroge AIP\n(obtient infos client payé)
+    partClientPayeur -> aip: 4. Interroge AIP\n(obtient infos client payé)
+    aip -> piRac: 5. Interroge PI RAC\n(obtient infos client payé)
+    piRac --> aip: 6. Renvoie infos client payé
+    aip --> partClientPayeur: 7. Renvoie infos client payé
+    partClientPayeur --> appMobile: 8. Affiche infos client payé
+    appMobile -> clientPayeur: 9. Confirme le paiement
+    appMobile --> partClientPayeur: 10. Envoie transfert
+
+    partClientPayeur --> aip: 11. Envoie transfert
+
+    aip --> piSpi: 12. Route transfert au participant client \npayé Route transfert au participant client payé\n((message ISO 20022 pacs.008))
+    piSpi --> partClientPayeur: 13. Renvoie la réponse de reception\n(202)
+    partClientPayeur --> appMobile: 14. Renvoie la réponse de reception\n(202)
+    appMobile --> clientPayeur: 15. Renvoie la réponse de reception\n(202)
+    piSpi-->piSpi: Routage du transfert vers le participant du client payé.
+    piSpi -> partClientPaye: 16. Route transfert au participant client payé
+    partClientPaye --> piSpi: 17. Accepte paiement\n(message ISO 20022 pacs.002)
+    piSpi --> aip: 16. Notifie l'irrévocabilité\net PI du paiement
+
+
+
+    aip --> partClientPayeur: 18. Notifie l'irrévocabilité\net PI du paiement
+
+     partClientPayeur --> aip : 19. Accusé de réception vers API
+     note right : Accusé de réception en parallèle avec la notification
+
+    partClientPayeur --> appMobile: 20. Notifie succès au client payeur
+    partClientPaye --> clientPaye: 21. Notifie succès au client payé
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+left to right direction
+
+actor "Participant" as participant
+actor "Système Interopérabilité" as system
+
+rectangle "Administration" {
+
+  usecase "UC5 : Test de Connectivité vers PI" as UC5
+  usecase "UC6 : Sponsorisation de Participant Indirect" as UC6
+  usecase "UC7 : Gestion de Compte des Participants" as UC7
+
+}
+
+participant -- UC5
+participant -- UC6
+participant -- UC7
+'UC5 --> system : Test de Connectivité
+'UC6 --> system : Sponsorisation
+'UC7 --> system : Gestion de Compte
+
+@enduml

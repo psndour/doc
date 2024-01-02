@@ -1,0 +1,21 @@
+@startuml
+title "Recherche alias"
+actor "Client" as client
+participant "Application Mobile" as appMobile
+participant "Participant FreeMoney" as partFreeMoney
+database "AIP" as aip
+database "PI RAC" as piRac
+
+client -> appMobile: 1. Choix de recherche d'alias
+appMobile -> partFreeMoney: 2. Lance la demande de recherche d'alias
+partFreeMoney --> aip: 3. Transfère la demande à AIP
+aip --> piRac: 4. Transfère à PI RAC pour la recherche(message asynchrone)
+piRac --> partFreeMoney: 3. Renvoie la réponse de reception\n(202)
+piRac --> aip: 5. Renvoie les informations d'alias
+aip --> partFreeMoney: 6. Transfère les informations à FreeMoney
+partFreeMoney --> aip : 8. Accusé de réception vers API
+note right : Accusé de réception en parallèle avec la notification
+partFreeMoney --> appMobile: 7. Transfère les informations à l'App Mobile
+appMobile --> client: 8. Affiche les informations d'alias
+
+@enduml

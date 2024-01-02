@@ -1,0 +1,20 @@
+@startuml
+|Client|
+start
+:Choix du type d'alias;
+|Application Mobile|
+: Lance la demande de création d'alias;
+|Participant FreeMoney|
+:Transfère la demande à AIP\n(message asynchrone);
+|AIP|
+:Transfère à PI RAC pour la création\n(message asynchrone);
+|PI RAC|
+:Renvoie la réponse de création\n(202);
+: Création d'alias\nen attente de réponse asynchrone;
+:Renvoie la réponse de création\n(notification asynchrone);
+|AIP|
+:Transfère la notification à FreeMoney;
+|Participant FreeMoney|
+:Notifie le client de la création d'alias;
+stop
+@enduml

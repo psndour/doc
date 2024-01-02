@@ -1,0 +1,54 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Utilisateur" as utilisateur
+actor "Participant" as participant
+actor "Marchand" as marchand
+
+rectangle "Système Interopérabilité" {
+
+  rectangle "Gestion des Alias" {
+    usecase "UC-001 : Création d’Alias" as UC1
+    usecase "UC-002: Recherche d’Alias" as UC2
+  }
+
+  rectangle "Gestion des \nTransferts" {
+
+    usecase "UC-003: Transfert P2P" as UC3
+
+  }
+
+  rectangle "Paiement \nMarchand" {
+
+    usecase "UC-004: Paiement Marchand" as UC4
+
+  }
+
+  rectangle "Administration" {
+
+    usecase "UC-005: Test de Connectivité vers PI" as UC5
+    usecase "UC-006: Sponsorisation de Participant Indirect" as UC6
+    usecase "UC-007: Gestion de Compte des Participants" as UC7
+
+  }
+
+}
+
+marchand -- UC4
+
+utilisateur -- UC1
+utilisateur -- UC2
+utilisateur -- UC4
+utilisateur -- UC3
+
+participant -- UC3
+participant -- UC4
+
+participant -- UC5
+participant -- UC6
+participant -- UC7
+
+
+@enduml

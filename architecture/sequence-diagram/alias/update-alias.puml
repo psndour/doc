@@ -1,0 +1,19 @@
+@startuml
+title "Modification des informations liée à l'alias"
+'participant "Application Mobile" as appMobile
+participant "Participant FreeMoney" as partFreeMoney
+database "AIP" as aip
+database "PI RAC" as piRac
+
+
+partFreeMoney -> aip: 1. Demande de modification alias  à AIP\n(message asynchrone)
+aip -> piRac: 2. Transfère à PI RAC pour la modification\n(message asynchrone)
+piRac --> partFreeMoney: 3. Renvoie la réponse de réception\n(202)
+note right: Modification d'alias\nen attente de réponse asynchrone
+piRac --> aip: 4. Renvoie la réponse de modification\n(notification asynchrone)
+aip --> partFreeMoney: 5. Transfère la notification à FreeMoney
+partFreeMoney --> aip : 6. Accusé de réception vers API
+note right : Accusé de réception en parallèle avec la notification
+'partFreeMoney --> appMobile: 5. Notifie le client de la modification d'alias
+
+@enduml

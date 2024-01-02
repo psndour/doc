@@ -1,0 +1,20 @@
+@startuml
+title "Envoyer une demande de vérification d'identité"
+
+participant "Participant FreeMoney" as partFreeMoney
+database "AIP" as aip
+database "PI RAC" as piRac
+participant "Participant B" as OtherParticipant
+
+partFreeMoney -> aip : 3. Demande identité
+aip -> piRac : 4. Transfère à PI RAC pour la verification\n(message asynchrone)
+piRac --> partFreeMoney : 5. Renvoie la réponse de création\n(202)
+note right : Demande d'identité \nen attente de réponse asynchrone
+
+piRac-->OtherParticipant : Demande identité
+piRac <--OtherParticipant : Réponse Demande identité
+
+piRac --> aip : 6. Renvoie la réponse de la demande\n(notification asynchrone)
+aip --> partFreeMoney : 7. Transfère la notification à FreeMoney
+note right : Accusé de réception en parallèle avec la notification
+@enduml

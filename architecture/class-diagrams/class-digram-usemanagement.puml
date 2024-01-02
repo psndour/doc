@@ -1,0 +1,49 @@
+@startuml
+!theme carbon-gray
+title Class Diagram: User Management
+scale 890 width
+package freemoney.disturbsment.usermanagement {
+class Role {
+  -  id: Integer
+  -  name: String
+}
+class Permissions {
+  -  id: Integer
+  -  name: String
+  -  label: String
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+class passwordHistory {
+  -  id: Integer
+  -  hasPassword: String
+}
+class passwordSecurity {
+  -  id: Integer
+  -  passwordExpiryDay: Integer
+  -  passwordUpdatedAt: DateTime
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+class User{
+ -  id: Integer
+ -  firstname: String
+ -  lastname: String
+ -  email: String
+ -  phone: String
+ -  password: String
+ -  createdAt: DateTime
+ -  updatedAt: DateTime
+ -  deletedAt: DateTime
+}
+
+ User "1" *-up- "*" passwordSecurity
+ User "1" *-left- "*" passwordHistory
+ Role "1" *-- "*" User
+ Role "0..*" <--> "0..*" Permissions
+ '(Role,Permissions) .. RolePermission
+}
+
+@enduml

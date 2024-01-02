@@ -1,0 +1,35 @@
+@startuml
+
+left to right direction
+
+actor "Utilisateur" as utilisateur
+actor "Marchand" as marchand
+
+rectangle "Paiement Marchand" {
+
+  usecase "UC4_1 : Envoi de paiement" as UC4_1
+  usecase "UC4_2 : Notification de paiement" as UC4_2
+  usecase "UC4_3 : Demande paiement immédiat" as UC4_3
+  usecase "UC4_4 : Demande paiement avec date de péremption" as UC4_4
+  usecase "UC4_5 : Accepter demande paiement immédiat" as UC4_5
+  usecase "UC4_6 : Refuser demande paiement immédiat" as UC4_6
+  usecase "UC4_7 : Accepter demande paiement avec date de péremption" as UC4_7
+  usecase "UC4_8 : Refuser demande paiement avec date de péremption" as UC4_8
+  usecase "UC4_9 : Ignorer demande paiement immédiat" as UC4_9
+  usecase "UC4_10 : Ignorer demande paiement avec date de péremption" as UC4_10
+
+}
+
+utilisateur -- UC4_1
+utilisateur -- UC4_2
+marchand -- UC4_2
+marchand -- UC4_3
+marchand -- UC4_4
+utilisateur -- UC4_5
+utilisateur -- UC4_6
+utilisateur -- UC4_7
+utilisateur -- UC4_8
+utilisateur -- UC4_9
+utilisateur -- UC4_10
+
+@enduml

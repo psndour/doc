@@ -591,6 +591,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_les_dépendances_externes">2.1.3. Les dépendances externes</a></li>
 </ul>
 </li>
+<li><a href="#_diagrammes_dinteraction">2.2. Diagrammes d&#8217;interaction</a>
+<ul class="sectlevel3">
+<li><a href="#_seq_001_création_dalias">2.2.1. SEQ-001 : Création d’Alias</a></li>
+<li><a href="#_seq_002_mise_à_jour_dalias">2.2.2. SEQ-002 : Mise à jour d’Alias</a></li>
+<li><a href="#_seq_003_suppression_dalias">2.2.3. SEQ-003: Suppression d’Alias</a></li>
+<li><a href="#_seq_004_recherche_dalias">2.2.4. SEQ-004: Recherche d’Alias</a></li>
+<li><a href="#_seq_005_transfert_p2p_demande_de_transfert_vers_pi_vers_un_autre_participant">2.2.5. SEQ-005 : Transfert P2P | Demande de transfert vers PI vers un autre participant.</a></li>
+<li><a href="#_seq_006_envoyer_une_demande_de_vérification_didentité">2.2.6. SEQ-006 : Envoyer une demande de vérification d&#8217;identité</a></li>
+<li><a href="#_seq_007_envoyer_une_réponse_à_une_demande_de_vérification_didentité">2.2.7. SEQ-007 : Envoyer une réponse à une demande de vérification d&#8217;identité</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -693,7 +704,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<strong>Dernière modification</strong> : 2023-11-30
+<strong>Dernière modification</strong> : 2024-01-02
 </td>
 </tr>
 </table>
@@ -1432,37 +1443,41 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Par Adresse de Paiement (SHID) :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les utilisateurs peuvent créer un alias en associant une adresse de paiement générée par PI-RAC.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Par Numéro de Téléphone Mobile (MBNO) :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les utilisateurs peuvent créer un alias en associant leur numéro de téléphone mobile.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Par Identifiant de Compte Marchand (MCOD) :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les utilisateurs peuvent créer un alias en associant leur identifiant de compte marchand.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Recherche d&#8217;Alias :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Permet la recherche d'un alias dans le système.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Les utilisateurs peuvent créer un alias en associant une adresse de paiement générée par PI-RAC.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Par Numéro de Téléphone Mobile (MBNO) :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les utilisateurs peuvent créer un alias en associant leur numéro de téléphone mobile.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Par Identifiant de Compte Marchand (MCOD) :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les utilisateurs peuvent créer un alias en associant leur identifiant de compte marchand.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Recherche d&#8217;Alias :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Permet la recherche d&#8217;un alias dans le système.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1471,28 +1486,34 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Demande de Transfert vers PI vers un Autre Participant :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les utilisateurs peuvent initier une demande de transfert vers un autre participant via le PI en spécifiant l'alias du bénéficiaire.</pre>
-</div>
-</div>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les utilisateurs peuvent initier une demande de transfert vers un autre participant via le PI en spécifiant l&#8217;alias du bénéficiaire.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p><strong>Accepter le Transfert Provenant de PI :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants peuvent accepter un transfert provenant du PI après réception de la notification correspondante.</pre>
-</div>
-</div>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les participants peuvent accepter un transfert provenant du PI après réception de la notification correspondante.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p><strong>Réception de la Notification de Paiement Irrévocable Provenant de PI :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants reçoivent une notification de paiement irrévocable suite à l'acceptation du transfert.</pre>
-</div>
-</div>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les participants reçoivent une notification de paiement irrévocable suite à l&#8217;acceptation du transfert.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p><strong>Notifier Son Client de l&#8217;État du Transfert :</strong></p>
 <div class="literalblock">
@@ -1503,13 +1524,11 @@ fournir les informations d’identification de son compte.</p>
 </li>
 <li>
 <p><strong>Vérifier le Statut d&#8217;un Transfert :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants peuvent vérifier le statut actuel d'un transfert en émettant une demande spécifique au PI.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Les participants peuvent vérifier le statut actuel d&#8217;un transfert en émettant une demande spécifique au PI.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1518,45 +1537,51 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Envoi de Paiement par un Client :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les clients de FreeMoney peuvent envoyer des paiements à des clients corporate participants en spécifiant l'alias du bénéficiaire.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Notification de Paiement :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les clients et les marchands reçoivent une notification de paiement avec l'alias correspondant.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Demande de Paiement Immédiate par un Marchand :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les marchands peuvent demander un paiement immédiat à un client en spécifiant l'alias du client.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Demande de Paiement avec Date de Péremption par un Marchand :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les marchands peuvent demander un paiement avec une date limite à un client en spécifiant l'alias du client.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Acceptation/Refus des Demandes de Paiement :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les clients peuvent accepter, refuser ou ignorer une demande de paiement du marchand, et vice versa.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Les clients de FreeMoney peuvent envoyer des paiements à des clients corporate participants en spécifiant l&#8217;alias du bénéficiaire.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Notification de Paiement :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les clients et les marchands reçoivent une notification de paiement avec l&#8217;alias correspondant.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Demande de Paiement Immédiate par un Marchand :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les marchands peuvent demander un paiement immédiat à un client en spécifiant l&#8217;alias du client.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Demande de Paiement avec Date de Péremption par un Marchand :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les marchands peuvent demander un paiement avec une date limite à un client en spécifiant l&#8217;alias du client.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Acceptation/Refus des Demandes de Paiement :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les clients peuvent accepter, refuser ou ignorer une demande de paiement du marchand, et vice versa.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1565,13 +1590,11 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Échange de Messages Admi.004 et Admi.011 :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Le système effectue un échange de messages dans les deux sens pour tester la connectivité avec le PI.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Le système effectue un échange de messages dans les deux sens pour tester la connectivité avec le PI.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1580,29 +1603,31 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Créer la Relation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants directs peuvent créer une relation avec un participant indirect en spécifiant l'alias du participant indirect.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Modification de la Relation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants directs peuvent modifier les détails de la relation avec un participant indirect en soumettant une demande spécifique.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Rompre une Relation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Les participants directs peuvent rompre la relation avec un participant indirect en spécifiant l'alias du participant indirect.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Les participants directs peuvent créer une relation avec un participant indirect en spécifiant l&#8217;alias du participant indirect.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Modification de la Relation :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les participants directs peuvent modifier les détails de la relation avec un participant indirect en soumettant une demande spécifique.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Rompre une Relation :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Les participants directs peuvent rompre la relation avec un participant indirect en spécifiant l&#8217;alias du participant indirect.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1611,29 +1636,31 @@ fournir les informations d’identification de son compte.</p>
 <ol class="arabic">
 <li>
 <p><strong>Compensation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Un message camt.053 est envoyé à PI après chaque compensation pour informer de la balance du participant.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Facturation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Un message représentant la facture camt.086 est envoyé mensuellement à chaque participant.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Réconciliation :</strong></p>
-<div class="literalblock">
-<div class="content">
-<pre>Le participant peut envoyer un message camt.060 pour obtenir le détail des transactions.</pre>
-</div>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Un message camt.053 est envoyé à PI après chaque compensation pour informer de la balance du participant.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Facturation :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Un message représentant la facture camt.086 est envoyé mensuellement à chaque participant.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Réconciliation :</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Le participant peut envoyer un message camt.060 pour obtenir le détail des transactions.</p>
 </div>
 <div class="paragraph">
 <p>Les spécifications fonctionnelles détaillées ci-dessus établissent le cadre opérationnel
@@ -1923,7 +1950,11 @@ des transactions.</p>
 <h3 id="_vue_logique">2.1. Vue logique</h3>
 <div class="sect3">
 <h4 id="_architecture">2.1.1. Architecture</h4>
-
+<div class="imageblock">
+<div class="content">
+<img src="architecture/archi/PI-BECEAO-ARCHI.drawio.png" alt="PI BECEAO ARCHI.drawio">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_les_composants_du_système">2.1.2. Les composants du système.</h4>
@@ -2044,12 +2075,358 @@ des transactions.</p>
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_diagrammes_dinteraction">2.2. Diagrammes d&#8217;interaction</h3>
+<div class="sect3">
+<h4 id="_seq_001_création_dalias">2.2.1. SEQ-001 : Création d’Alias</h4>
+<div class="paragraph">
+<p>La description textuelle de la séquence du cas d&#8217;utilisation "Création d&#8217;Alias" avec les mêmes acteurs que dans le cas du Transfert P2P est la suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le client, à travers l&#8217;application mobile, décide de créer un alias et choisit le type d&#8217;alias qu&#8217;il souhaite créer (par exemple, une adresse de paiement, un numéro de téléphone mobile, ou un identifiant de compte marchand).</p>
+</li>
+<li>
+<p>L&#8217;application mobile communique avec le participant FreeMoney pour lancer la demande de création d&#8217;alias.</p>
+</li>
+<li>
+<p>Le participant FreeMoney, à travers son Application d&#8217;Interfacage Participant (AIP), transfère la demande de création d&#8217;alias vers PI RAC (Répertoire des Alias de Compte) en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>PI RAC reçoit la demande de création d&#8217;alias de manière asynchrone et procède à la création de l&#8217;alias dans son système et envoie une réponse avec code http 202.</p>
+</li>
+<li>
+<p>Une fois l&#8217;alias créé avec succès, PI RAC envoie une notification de création d&#8217;alias en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>L&#8217;AIP reçoit la notification de création d&#8217;alias de PI RAC.</p>
+</li>
+<li>
+<p>L&#8217;AIP transfère la notification au participant FreeMoney.</p>
+</li>
+<li>
+<p>Le participant FreeMoney prend connaissance de la notification de création d&#8217;alias et finalise le processus de création d&#8217;alias pour le client.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cette séquence illustre comment un client, à travers l&#8217;application mobile, peut initier la création d&#8217;un alias, et comment cette demande est gérée de manière asynchrone par les différents composants du système, notamment l&#8217;AIP et PI RAC.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/alias/create-alias.svg" alt="create alias">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_002_mise_à_jour_dalias">2.2.2. SEQ-002 : Mise à jour d’Alias</h4>
+<div class="paragraph">
+<p>Cette opération permet de mettre à jour les informations du client propriétaire de l’alias ou les informations sur le compte du client.
+Traitement de la réponse
+Mise à jour des informations clientèles dans le SI du participant(FREE-MONEY).
+Il est important de mettre à jour la date de modification (renvoyé par PI) de l&#8217;alias dans notre Système d&#8217;Information pour le client donné.</p>
+</div>
+<div class="paragraph">
+<p>La description textuelle de la séquence du cas d&#8217;utilisation "Modification d&#8217;Alias" en se basant sur la création d&#8217;alias est la suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le participant FreeMoney, via son Application d&#8217;Interfacage Participant (AIP), transfère la demande de modification d&#8217;alias vers PI RAC en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>PI RAC reçoit la demande de modification d&#8217;alias de manière asynchrone et effectue la modification de l&#8217;alias dans son système et envoie une réponse avec code http 202.</p>
+</li>
+<li>
+<p>Une fois la modification effectuée avec succès, PI RAC envoie une notification de modification d&#8217;alias en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>L&#8217;AIP reçoit la notification de modification d&#8217;alias de PI RAC.</p>
+</li>
+<li>
+<p>L&#8217;AIP transfère la notification au participant FreeMoney.</p>
+</li>
+<li>
+<p>Le participant FreeMoney prend connaissance de la notification de modification d&#8217;alias et finalise le processus de modification d&#8217;alias pour le client.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cette séquence illustre comment un client peut demander la modification d&#8217;un alias existant, et comment cette demande est traitée de manière asynchrone par les composants du système, notamment l&#8217;AIP et PI RAC.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/alias/update-alias.svg" alt="update alias">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_003_suppression_dalias">2.2.3. SEQ-003: Suppression d’Alias</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le Participant FreeMoney, via son Application d&#8217;Interfacage Participant (AIP), envoie la demande de suppression d&#8217;alias à PI RAC en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>PI RAC reçoit la demande de suppression d&#8217;alias de manière asynchrone et procède à la suppression de l&#8217;alias dans son système et envoie une réponse avec code http 202.</p>
+</li>
+<li>
+<p>Une fois la suppression effectuée avec succès, PI RAC envoie une notification de suppression d&#8217;alias en utilisant un message asynchrone.</p>
+</li>
+<li>
+<p>L&#8217;AIP reçoit la notification de suppression d&#8217;alias de PI RAC.</p>
+</li>
+<li>
+<p>'AIP transfère la notification au Participant FreeMoney.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Le Participant FreeMoney notifie l&#8217;application mobile du client de la suppression réussie de l&#8217;alias.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/alias/delete-alias.svg" alt="delete alias">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_004_recherche_dalias">2.2.4. SEQ-004: Recherche d’Alias</h4>
+<div class="paragraph">
+<p>La description textuelle du cas d&#8217;utilisation "Recherche d&#8217;Alias" est la suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le client, via l&#8217;application mobile, sélectionne l&#8217;option de recherche d&#8217;alias.</p>
+</li>
+<li>
+<p>L&#8217;application mobile communique avec le Participant FreeMoney pour lancer la demande de recherche d&#8217;alias.</p>
+</li>
+<li>
+<p>Le Participant FreeMoney, via son Application d&#8217;Interfacage Participant (AIP), transfère la demande de recherche d&#8217;alias à PI RAC.</p>
+</li>
+<li>
+<p>PI RAC traite la demande de recherche d&#8217;alias et renvoie les informations associées à l&#8217;alias recherché.</p>
+</li>
+<li>
+<p>L&#8217;AIP reçoit les informations de PI RAC.</p>
+</li>
+<li>
+<p>L&#8217;AIP transfère les informations au Participant FreeMoney.</p>
+</li>
+<li>
+<p>Le Participant FreeMoney affiche les informations d&#8217;alias sur l&#8217;application mobile du client.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cette séquence illustre comment un client peut effectuer une recherche d&#8217;alias, et comment cette demande est traitée par les composants du système, en particulier l&#8217;AIP et PI RAC, pour fournir les informations associées à l&#8217;alias recherché.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flow simplifié</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/alias/search.png" alt="search">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flow détaillés</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/alias/search-alias.svg" alt="search alias">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_005_transfert_p2p_demande_de_transfert_vers_pi_vers_un_autre_participant">2.2.5. SEQ-005 : Transfert P2P | Demande de transfert vers PI vers un autre participant.</h4>
+<div class="paragraph">
+<p><strong>Description textuelle du scénario de transfert P2P :</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le <strong>Client Particulier Payeur</strong> lance l&#8217;application mobile.</p>
+</li>
+<li>
+<p>Le <strong>Client Particulier Payeur</strong> initie un transfert P2P en spécifiant l&#8217;alias du client payé.</p>
+</li>
+<li>
+<p>L'<strong>Application Mobile</strong> interroge le <strong>Participant Client Payeur (FREE-MONEY)</strong> pour obtenir des informations sur le client payé.</p>
+</li>
+<li>
+<p>Le <strong>Participant Client Payeur</strong> interroge l'<strong>Application d&#8217;Interfacage Participant (AIP)</strong> pour obtenir des informations sur le client payé.</p>
+</li>
+<li>
+<p>L'<strong>AIP</strong> interroge le <strong>PI RAC (Repertoire des Alias de Compte)</strong> pour obtenir des informations sur le client payé.</p>
+</li>
+<li>
+<p>Le <strong>PI RAC</strong> répond en fournissant les informations du client payé.</p>
+</li>
+<li>
+<p>Les informations du client payé sont renvoyées de manière synchrone de l'<strong>AIP</strong> au <strong>Participant Client Payeur</strong>, puis affichées dans l'<strong>Application Mobile</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Client Particulier Payeur</strong> confirme le paiement dans l&#8217;application mobile.</p>
+</li>
+<li>
+<p>L'<strong>Application Mobile</strong> envoie la demande de transfert au <strong>Participant Client Payeur (FREE-MONEY)</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Participant Client Payeur</strong> envoie la demande de transfert au <strong>Système PI SPI (Système de Paiement Instantané)</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Système PI SPI</strong> route le transfert au <strong>Participant Client Payé (OTHERS)</strong> en utilisant un message ISO 20022 pacs.008. Le statut 202 est renvoyé au <strong>Participant Client Payeur</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Système PI SPI</strong> route le transfert au <strong>Participant Client Payé</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Participant Client Payé</strong> accepte le paiement en envoyant un message ISO 20022 pacs.002 au <strong>Système PI SPI</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Système PI SPI</strong> notifie l&#8217;irrévocabilité du paiement au <strong>Participant Client Payeur</strong> et au <strong>PI (Banque Centrale)</strong>.</p>
+</li>
+<li>
+<p>L'<strong>AIP</strong> notifie l&#8217;irrévocabilité du paiement au <strong>Participant Client Payeur</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Participant Client Payeur</strong> notifie le succès au <strong>Client Particulier Payeur</strong>.</p>
+</li>
+<li>
+<p>Le <strong>Participant Client Payé</strong> notifie le succès au <strong>Client Particulier Payé</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ce scénario décrit le processus de transfert P2P entre un client payeur et un client payé, en utilisant le système interopérable avec la BCEAO (Banque Centrale des États de l&#8217;Afrique de l&#8217;Ouest).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flow simplifié</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/p2p/p2p.png" alt="p2p">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flow détaillés</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/p2p/request-p2p.svg" alt="request p2p">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_006_envoyer_une_demande_de_vérification_didentité">2.2.6. SEQ-006 : Envoyer une demande de vérification d&#8217;identité</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le Participant FreeMoney initie le processus en envoyant une demande de vérification d&#8217;identité à AIP.</p>
+</li>
+<li>
+<p>AIP transfère la demande à PI RAC pour effectuer la vérification d&#8217;identité de manière asynchrone.</p>
+</li>
+<li>
+<p>PI RAC reçoit la demande et donne une réponse avec un code HTTP 202.</p>
+</li>
+<li>
+<p>En parallèle, PI RAC envoie une demande d&#8217;identité à d&#8217;autres participants concernés.</p>
+</li>
+<li>
+<p>Le participant requis, répondent à la demande d&#8217;identité de PI RAC.</p>
+</li>
+<li>
+<p>PI RAC reçoit la réponse du participant.</p>
+</li>
+<li>
+<p>PI RAC envoie la réponse de la demande d&#8217;identité à AIP.</p>
+</li>
+<li>
+<p>AIP transfère la notification de réponse à FreeMoney.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ce processus garantit une vérification d&#8217;identité sécurisée et asynchrone, permettant une communication fluide entre les participants du système.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flow détaillés</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/identity/send-request-identity.svg" alt="send request identity">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_seq_007_envoyer_une_réponse_à_une_demande_de_vérification_didentité">2.2.7. SEQ-007 : Envoyer une réponse à une demande de vérification d&#8217;identité</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Description textuelle</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>L&#8217;API reçoit une demande d&#8217;identité de la part de PI RAC.</p>
+</li>
+<li>
+<p>L&#8217;AIP transfert la demande d&#8217;identité au Participant FreeMoney.</p>
+</li>
+<li>
+<p>Le Participant FreeMoney reçoit la demande d&#8217;identité.</p>
+</li>
+<li>
+<p>Le Participant FreeMoney transfert la réponse identité ver l&#8217;AIP.</p>
+</li>
+<li>
+<p>L&#8217;AIP' transfert la réponse identité vers PI RAC.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Flow détaillés</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="architecture/sequence-diagram/identity/response-request-identity.svg" alt="response request identity">
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-30 03:09:40 UTC
+Last updated 2024-01-02 09:47:42 UTC
 </div>
 </div>
 <script>

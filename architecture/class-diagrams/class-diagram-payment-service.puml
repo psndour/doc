@@ -1,0 +1,104 @@
+@startuml
+!theme carbon-gray
+title Class Diagram: Payment Service
+scale 1024 width
+
+package freemoney.disturbsment.paymentservice {
+class Company {
+  -  id: Integer
+  -  name: String
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+
+class Service {
+  -  id: Integer
+  -  name: String
+  -  code: String
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+
+class Campaign {
+  -  id: Integer
+  -  name: String
+  -  code: String
+  -  startAt: Date
+  -  amountTotal: Float
+  -  totalItem: Integer
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+
+class Beneficiary {
+  -  name: String
+  -  amount: Double
+  -  msisd: String
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+
+class Transaction {
+  -  id: Integer
+  -  amount: Double
+  -  msisdn: String
+  -  serviceCode: String
+  -  campaignCode: String
+  -  smsContent: String
+  -  status: String
+  "START","FAILED","RUNNING", "SUCCESS
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+class User{
+ -  id: Integer
+ -  firstname: String
+ -  lastname: String
+ -  email: String
+ -  phone: String
+ -  password: String
+ -  createdAt: DateTime
+ -  updatedAt: DateTime
+ -  deletedAt: DateTime
+}
+class Subscription{
+  -  id: Integer
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+class FeesPlan{
+  -  id: Integer
+  -  isFixed: Boolean
+  -  fee: Float
+  -  createdAt: DateTime
+  -  updatedAt: DateTime
+  -  deletedAt: DateTime
+}
+left to right direction
+
+User "*" --o  "1" Company
+
+Campaign "*" --o  "1" Company
+
+Campaign "*" --o  "1" Service
+
+Service "0..*" - "0..*" Company
+(Service, Company) .. Subscription
+
+Service "0..*" - "0..*" Company
+(Service, Company) .. FeesPlan
+
+
+Beneficiary "*" --o  "1" Campaign
+
+Transaction "*" -up-o  "1" Beneficiary
+'Transaction "*" --o  "1" Service
+
+}
+@enduml

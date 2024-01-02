@@ -1,0 +1,16 @@
+@startuml
+
+participant "Participant FreeMoney" as partFreeMoney
+database "AIP" as aip
+database "PI RAC" as piRac
+
+partFreeMoney -> aip: 1. Demande de suppression d'alias à AIP\n(message asynchrone)
+aip -> piRac: 2. Transfère à PI RAC pour la suppression\n(message asynchrone)
+piRac --> partFreeMoney: 3. Renvoie la réponse de reception\n(202)
+note right: Suppression d'alias\nen attente de réponse asynchrone
+piRac --> aip: 4. Renvoie la réponse de suppression\n(notification asynchrone)
+aip --> partFreeMoney: 5. Transfère la notification à FreeMoney
+partFreeMoney --> aip : 6. Accusé de réception vers API
+note right : Accusé de réception en parallèle avec la notification
+
+@enduml

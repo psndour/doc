@@ -1,0 +1,15 @@
+@startuml
+
+title Annulation de Paiement - Diagramme d'Activité
+(*) --> "Sélectionne Liste Campagne" as Step1
+--> "Récupère les campagnes déjà validées" as Step2
+--> "Sélectionne la transaction à annuler" as Step3
+--> "Annuler paiement" as Step4
+--> "Mettre à jour le STATUS" as Step5
+--> "Confirmation de l'annulation" as Step6
+--> (*)
+
+Step4 --> Step5 : Annulation réussie ?
+Step4 -left-> Step6 : Non
+
+@enduml

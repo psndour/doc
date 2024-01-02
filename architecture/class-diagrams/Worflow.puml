@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+'!theme carbon-gray
+'title Class Diagram: WORKFLOW
+'scale 1024 width
+
+class User{
+ -  id: Integer
+}
+
+class Role{
+ -  id: Integer
+}
+
+
+class Company {
+  -  id: Integer
+}
+class Subscription{
+  -  id: Integer
+}
+
+class Service {
+  -  id: Integer
+}
+
+class Campaign {
+  -  id: Integer
+}
+
+class WorkFlow {
+  -  id: Integer
+}
+
+class WorkFlowSteps {
+  -  id: Integer
+}
+
+class WorkFlowStepsUsers {
+  -  id: Integer
+}
+
+class WorkFlowValidation {
+  -  id: Integer
+}
+
+left to right direction
+
+User "*" --o  "1" Company
+
+Campaign "*" --o  "1" Company
+
+Campaign "*" --o  "1" Service
+
+Service "0..*" - "0..*" Company
+(Service, Company) .. Subscription
+
+
+
+
+
+
+
+
+
+
+@enduml

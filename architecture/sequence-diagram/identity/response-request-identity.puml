@@ -1,0 +1,14 @@
+@startuml
+title "Envoyer une réponse à une demande de vérification d'identité"
+
+participant "Participant FreeMoney" as partFreeMoney
+database "AIP" as aip
+database "PI RAC" as piRac
+
+piRac -> aip : 1. Demande identité
+aip -> partFreeMoney : 2. Demande identité
+
+partFreeMoney -> aip : 3. Renvoie la réponse d'identité de la demande
+aip --> piRac : 4. Transfère la réponse d'identité à PI RAC
+
+@enduml

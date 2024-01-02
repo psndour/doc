@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+
+actor "Utilisateur" as utilisateur
+actor "Participant" as participant
+
+rectangle "Gestion des Alias : Participant" {
+
+  usecase "UC1_1 : Création d’Alias dans le PI-RAC" as UC1_1
+  usecase "UC1_2 : Recherche d’Alias dans le PI-RAC" as UC1_2
+  usecase "UC1_3 : Modifier d’Alias dans le PI-RAC" as UC1_3
+
+}
+
+utilisateur -- UC1_1
+utilisateur -- UC1_2
+utilisateur -- UC1_3
+participant -- UC1_1
+participant -- UC1_2
+participant -- UC1_3
+
+
+@enduml
